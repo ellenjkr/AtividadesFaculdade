@@ -41,11 +41,17 @@ public class MainActivity extends AppCompatActivity {
         franchisesListView.setAdapter(adapter);
 
         franchisesListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(MainActivity.this, "Cliquei hein: "+ position, Toast.LENGTH_SHORT).show();
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(getApplicationContext(), RestaurantsActivity.class);
+                intent.putExtra("ChosenFranchise", franchises.get(i));
+                startActivity(intent);
+//                franchisesListView.getItemIdAtPosition(i)
             }
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                Toast.makeText(MainActivity.this, "Cliquei hein: "+ position, Toast.LENGTH_SHORT).show();
+//            }
 
         });
     }
