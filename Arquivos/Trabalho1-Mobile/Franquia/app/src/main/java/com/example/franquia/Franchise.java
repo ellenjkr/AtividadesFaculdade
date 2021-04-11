@@ -10,17 +10,34 @@ public class Franchise implements Parcelable {
     private String name;
     private String description;
     private String image;
+    private List restaurants;
 
     public Franchise(String name, String description, String image) {
         this.name = name;
         this.description = description;
         this.image = image;
+        this.restaurants = new ArrayList<Restaurant>();
     }
 
     protected Franchise(Parcel in) {
         name = in.readString();
         description = in.readString();
         image = in.readString();
+        restaurants = new ArrayList<Restaurant>();
+        in.readTypedList(restaurants, Restaurant.CREATOR);
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(name);
+        dest.writeString(description);
+        dest.writeString(image);
+        dest.writeTypedList(restaurants);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
     }
 
     public static final Creator<Franchise> CREATOR = new Creator<Franchise>() {
@@ -47,16 +64,12 @@ public class Franchise implements Parcelable {
         return this.image;
     }
 
-
-    @Override
-    public int describeContents() {
-        return 0;
+    public List getRestaurants(){
+        return this.restaurants;
     }
 
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(name);
-        dest.writeString(description);
-        dest.writeString(image);
+    public void addRestaurant(Restaurant restaurant){
+        this.restaurants.add(restaurant);
     }
+
 }

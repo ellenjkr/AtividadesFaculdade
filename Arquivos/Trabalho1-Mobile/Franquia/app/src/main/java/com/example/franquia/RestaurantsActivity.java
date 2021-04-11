@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
+import java.util.ArrayList;
+import java.util.List;
 
 public class RestaurantsActivity extends AppCompatActivity {
 
@@ -16,7 +18,9 @@ public class RestaurantsActivity extends AppCompatActivity {
         Intent intent = getIntent();
         Franchise franchise = intent.getParcelableExtra("ChosenFranchise");
 
-        String name = franchise.getName();
+        List<Restaurant> restaurants = franchise.getRestaurants();
+        Restaurant restaurant = restaurants.get(0);
+        String name = restaurant.getName();
 
         TextView textView = findViewById(R.id.nameTextView);
         textView.setText(name);
