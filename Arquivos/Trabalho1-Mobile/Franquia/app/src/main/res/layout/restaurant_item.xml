@@ -5,16 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageViewRestaurant"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="15dp"
-        android:layout_marginLeft="20dp"
-        app:srcCompat="@drawable/pizzahut"
-        />
+<!--    <ImageView-->
+<!--        android:id="@+id/imageViewRestaurant"-->
+<!--        android:layout_width="75dp"-->
+<!--        android:layout_height="75dp"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:layout_marginBottom="15dp"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        app:srcCompat="@drawable/pizzahut"-->
+<!--        />-->
 
     <TextView
         android:id="@+id/textViewRestaurantName"
@@ -22,24 +22,24 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:textStyle="bold"
-        android:textSize="18sp"
-        android:layout_alignTop="@id/imageViewRestaurant"
-        android:layout_toRightOf="@id/imageViewRestaurant"
-        />
+        android:textSize="18sp"/>
+<!--        android:layout_alignTop="@id/imageViewRestaurant"-->
+<!--        android:layout_toRightOf="@id/imageViewRestaurant"-->
 
-    <TextView
-        android:id="@+id/textViewRestaurantDescription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="15dp"
-        android:textSize="14sp"
-        android:gravity="center_vertical"
-        android:layout_alignTop="@id/imageViewRestaurant"
-        android:layout_toRightOf="@id/imageViewRestaurant"
 
-        tools:ignore="RtlCompat" />
+<!--    <TextView-->
+<!--        android:id="@+id/textViewRestaurantDescription"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:layout_marginTop="25dp"-->
+<!--        android:layout_marginRight="20dp"-->
+<!--        android:layout_marginBottom="15dp"-->
+<!--        android:textSize="14sp"-->
+<!--        android:gravity="center_vertical"-->
+<!--        android:layout_alignTop="@id/imageViewRestaurant"-->
+<!--        android:layout_toRightOf="@id/imageViewRestaurant"-->
+
+<!--        tools:ignore="RtlCompat" />-->
 
 </RelativeLayout>

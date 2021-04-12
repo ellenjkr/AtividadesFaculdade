@@ -42,6 +42,7 @@ public class Adapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         View franchiseItem = convertView;
         franchiseItem = inflater.inflate(R.layout.franchise_item, parent, false);
+
         ImageView image = (ImageView) franchiseItem.findViewById(R.id.imageViewFranchise);
         TextView name = (TextView) franchiseItem.findViewById(R.id.textViewName);
         TextView description = (TextView) franchiseItem.findViewById(R.id.textViewDescription);

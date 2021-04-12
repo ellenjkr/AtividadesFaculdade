@@ -4,14 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 import java.util.ArrayList;
 
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private ListView franchisesListView;
@@ -39,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
         Restaurant restaurantFour = new Restaurant("Restaurante 4");
 
         franchiseOne.addRestaurant(restaurantOne);
+        franchiseOne.addRestaurant(restaurantTwo);
+
         franchiseTwo.addRestaurant(restaurantTwo);
         franchiseThree.addRestaurant(restaurantThree);
         franchiseFour.addRestaurant(restaurantFour);
