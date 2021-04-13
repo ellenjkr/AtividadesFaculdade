@@ -12,21 +12,17 @@
         android:layout_centerVertical="true"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="15dp"
-        android:layout_marginLeft="20dp"
-        app:srcCompat="@drawable/pizzahut"
-        />
+        android:layout_marginLeft="20dp" />
 
     <TextView
         android:id="@+id/textViewName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:text="Burger King"
-        android:textStyle="bold"
-        android:textSize="18sp"
         android:layout_alignTop="@id/imageViewFranchise"
         android:layout_toRightOf="@id/imageViewFranchise"
-        />
+        android:textStyle="bold"
+        android:textSize="18sp"/>
 
     <TextView
         android:id="@+id/textViewDescription"
@@ -36,12 +32,10 @@
         android:layout_marginTop="25dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="15dp"
-        android:text="Isso aqui é uma descrição"
-        android:textSize="14sp"
-        android:gravity="center_vertical"
         android:layout_alignTop="@id/imageViewFranchise"
         android:layout_toRightOf="@id/imageViewFranchise"
-
-        tools:ignore="RtlCompat" />
+        android:textSize="14sp"
+        android:gravity="center_vertical"
+        tools:ignore="RtlCompat"/>
 
 </RelativeLayout>

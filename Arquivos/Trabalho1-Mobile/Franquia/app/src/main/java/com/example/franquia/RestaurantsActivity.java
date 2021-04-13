@@ -18,29 +18,29 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RestaurantsActivity extends AppCompatActivity {
-    private ListView restaurantsListView;
-    private AdapterRestaurants adapter;
-    private Franchise franchise;
+    private ListView restaurantsListView; // ListView for the restaurants
+    private AdapterRestaurants adapter; // Adapter for the restaurants
+    private Franchise franchise; // The restaurants franchise
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_restaurants);
+        setContentView(R.layout.activity_restaurants); // Defines the layout
 
-        getSupportActionBar().setTitle("Restaurantes");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Restaurantes"); // Set title for the activity
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true); // Back button
 
-        Intent intent = getIntent();
-        franchise = intent.getParcelableExtra("ChosenFranchise");
+        Intent intent = getIntent(); // Get the intent that brought the user to this activity
+        franchise = intent.getParcelableExtra("ChosenFranchise"); // Get the data sent with the intent
 
-        listRestaurants();
+        listRestaurants(); // List all the franchise's restaurants on the listview
     }
 
 
     public void listRestaurants(){
-        adapter = new AdapterRestaurants(this, (ArrayList<Restaurant>) franchise.getRestaurants());
-        restaurantsListView = (ListView) findViewById(R.id.restaurantsListView);
-        restaurantsListView.setAdapter(adapter);
+        adapter = new AdapterRestaurants(this, (ArrayList<Restaurant>) franchise.getRestaurants()); // Creates adapter
+        restaurantsListView = (ListView) findViewById(R.id.restaurantsListView);  // Get listview
+        restaurantsListView.setAdapter(adapter); // Set adapter, responsible for filling the listview with the restaurants
     }
 }
