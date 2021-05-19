@@ -11,12 +11,3 @@ ARREDONDAR
 
 https://www.calculatored.com/lang/pt/rounding-calculator
 
-TABELA
-
-https://learn-us-east-1-prod-fleet02-xythos.learn.cloudflare.blackboardcdn.com/5c23e74d6d9cb/758604?X-Blackboard-Expiration=1621317600000&X-Blackboard-Signature=7p7a6BbuUF0AAAnaOG8EDUQkyr6y24iLcDUslVk2efM%3D&X-Blackboard-Client-Id=528939&response-cache-control=private%2C%20max-age%3D21600&response-content-disposition=inline%3B%20filename%2A%3DUTF-8%27%27Tabela%2520ZNORMAL.pdf&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20210518T000000Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Credential=AKIAZH6WM4PL5SJBSTP6%2F20210518%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=43c0b1b07a71a310b12a3a61f0c4ea0944acd13a8f888a7ef5013eab515e8845
-
-
-SLIDES 
-
-https://learn-us-east-1-prod-fleet02-xythos.learn.cloudflare.blackboardcdn.com/5c23e74d6d9cb/1801405?X-Blackboard-Expiration=1621371600000&X-Blackboard-Signature=p8JBW7UuK82clWgDHr6fh7AS5Her18rPe5i3%2BeMCadQ%3D&X-Blackboard-Client-Id=528939&response-cache-control=private%2C%20max-age%3D21600&response-content-disposition=inline%3B%20filename%2A%3DUTF-8%27%27distribui%25C3%25A7%25C3%25A3oNORMALaulamarina.pdf&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20210518T150000Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Credential=AKIAZH6WM4PL5SJBSTP6%2F20210518%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=572d5e6619873e1a7721aee1870c7ce4934f8a48f151039a5175f77b17230c40
-
