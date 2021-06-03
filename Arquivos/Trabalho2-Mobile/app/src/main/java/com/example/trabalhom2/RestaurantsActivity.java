@@ -34,13 +34,13 @@ public class RestaurantsActivity extends AppCompatActivity {
         Intent intent = getIntent(); // Get the intent that brought the user to this activity
         franchise = intent.getParcelableExtra("ChosenFranchise"); // Get the data sent with the intent
 
-        listRestaurants(); // List all the franchise's restaurants on the listview
+       // listRestaurants(); // List all the franchise's restaurants on the listview
     }
-
+/*
 
     public void listRestaurants(){
         adapter = new AdapterRestaurants(this, (ArrayList<Restaurant>) franchise.getRestaurants()); // Creates adapter
         restaurantsListView = (ListView) findViewById(R.id.restaurantsListView);  // Get listview
         restaurantsListView.setAdapter(adapter); // Set adapter, responsible for filling the listview with the restaurants
-    }
+    }*/
 }

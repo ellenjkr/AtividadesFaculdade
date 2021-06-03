@@ -1,23 +1,22 @@
 package com.example.trabalhom2;
-import android.os.Parcel;
-import android.os.Parcelable;
-import java.util.ArrayList;
-import java.util.List;
 
 
-public class Franchise implements Parcelable { // Must implement Parcelable so it can be sent to a new acitivy as an object
+
+public class Franchise { // Must implement Parcelable so it can be sent to a new acitivy as an object
 
     // Attributes
     private String name;
     private String description;
-    private String image;
-    private List restaurants;
+    private float price;
+    private boolean gluten;
+    private int cal;
 
-    public Franchise(String name, String description, String image) { // Constructor
+    public Franchise(String name, String description, float price, boolean gluten, int cal) { // Constructor
         this.name = name;
         this.description = description;
-        this.image = image;
-        this.restaurants = new ArrayList<Restaurant>();
+        this.price = price;
+        this.gluten = gluten;
+        this.cal = cal;
     }
 
     // Get
@@ -29,49 +28,15 @@ public class Franchise implements Parcelable { // Must implement Parcelable so i
         return this.description;
     }
 
-    public String getImage() {
-        return this.image;
+    public float getPrice() {
+        return this.price;
     }
 
-    public List getRestaurants(){
-        return this.restaurants;
+    public boolean getGluten() {
+        return this.gluten;
     }
 
-    // Add a restaurant to the list of restaurants
-    public void addRestaurant(Restaurant restaurant){
-        this.restaurants.add(restaurant);
+    public int getCal() {
+        return this.cal;
     }
-
-    protected Franchise(Parcel in) { // Parcel method
-        name = in.readString();
-        description = in.readString();
-        image = in.readString();
-        restaurants = new ArrayList<Restaurant>();
-        in.readTypedList(restaurants, Restaurant.CREATOR);
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) { // Parcel method
-        dest.writeString(name);
-        dest.writeString(description);
-        dest.writeString(image);
-        dest.writeTypedList(restaurants);
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
-    } // Parcel method
-
-    public static final Creator<Franchise> CREATOR = new Creator<Franchise>() { // Parcel method
-        @Override
-        public Franchise createFromParcel(Parcel in) {
-            return new Franchise(in);
-        }
-
-        @Override
-        public Franchise[] newArray(int size) {
-            return new Franchise[size];
-        }
-    };
 }

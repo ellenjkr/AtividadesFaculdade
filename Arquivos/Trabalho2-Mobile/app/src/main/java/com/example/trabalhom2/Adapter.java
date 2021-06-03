@@ -55,8 +55,8 @@ public class Adapter extends BaseAdapter {
         Franchise currentFranchise = franchises.get(position); // Get a franchise from the list of franchises
 
         // Set each field of the listview item with the current franchise data
-        int imageID = context.getResources().getIdentifier(currentFranchise.getImage(), "drawable", context.getPackageName());
-        image.setImageResource(imageID);
+        //int imageID = context.getResources().getIdentifier(currentFranchise.getImage(), "drawable", context.getPackageName());
+        //image.setImageResource(imageID);
         name.setText(currentFranchise.getName());
         description.setText(currentFranchise.getDescription());
 
