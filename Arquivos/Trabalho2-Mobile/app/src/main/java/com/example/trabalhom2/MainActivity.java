@@ -10,9 +10,9 @@ import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity {
-    private ListView franchisesListView; // ListView for the franchises
-    private ArrayList<MenuItem> menuItems = new ArrayList<>(); // Array with franchises
-    private Adapter adapter; // Adapter for the franchises
+    private ListView menuItemsListView; // ListView for the menu items
+    private ArrayList<MenuItem> menuItems = new ArrayList<>(); // Array with menu items
+    private Adapter adapter; // Adapter for the menu items
 
 
     @Override
@@ -20,27 +20,28 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main); // Defines the layout
 
-        getSupportActionBar().setTitle("Franquias"); // Set title for the activity
+        getSupportActionBar().setTitle("Cardápio"); // Set title for the activity
 
-        addFranchises(); // Add franchises to the array of franchises
+        addMenuItems(); // Add menu items to the array of menu items
 
         adapter = new Adapter(this, menuItems); // Creates adapter
-        franchisesListView.setAdapter(adapter); // Set adapter, responsible for filling the listview with the franchises
+        menuItemsListView.setAdapter(adapter); // Set adapter, responsible for filling the listview with the menu items
 
     }
 
-    public void addFranchises(){
-        franchisesListView = (ListView) findViewById(R.id.franchisesListView); // Get listview
+    public void addMenuItems(){
+        menuItemsListView = (ListView) findViewById(R.id.menuItemsListView); // Get listview
 
-        DbHelper dbHelper = new DbHelper(MainActivity.this);
-        //dbHelper.saveData("nome2", "decricao2", "200.50", "sim", "300", "pizzahut");
+        DbHelper dbHelper = new DbHelper(MainActivity.this); // Get the db helper
+        //dbHelper.saveData("nome2", "decricao2", "200.50", "sim", "300", "pizzahut"); // Add new line to the database
 
-        Cursor cursor = dbHelper.ViewData();
+        Cursor cursor = dbHelper.ViewData(); // Get the cursor to view the data
 
-        while(cursor.moveToNext()){
+        while(cursor.moveToNext()){ // Iterate through the cursor
+            // Create new menu item with the data from the database
             MenuItem menuItem = new MenuItem(cursor.getString(1), cursor.getString(2), cursor.getString(3),  cursor.getString(4), cursor.getString(5), cursor.getString(6));
 
-            this.menuItems.add(menuItem);
+            this.menuItems.add(menuItem); // Add menu item to the list of menu items
         }
     }
 }

@@ -1,8 +1,6 @@
 package com.example.trabalhom2;
 
-
-
-public class MenuItem { // Must implement Parcelable so it can be sent to a new acitivy as an object
+public class MenuItem {
 
     // Attributes
     private String name;
