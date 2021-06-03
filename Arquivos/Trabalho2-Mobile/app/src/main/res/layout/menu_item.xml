@@ -37,5 +37,5 @@
         android:textSize="14sp"
         android:gravity="center_vertical"
         tools:ignore="RtlCompat"/>
-    
+
 </RelativeLayout>
