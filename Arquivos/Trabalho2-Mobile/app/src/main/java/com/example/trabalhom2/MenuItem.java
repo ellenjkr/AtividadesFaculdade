@@ -2,7 +2,7 @@ package com.example.trabalhom2;
 
 
 
-public class Franchise { // Must implement Parcelable so it can be sent to a new acitivy as an object
+public class MenuItem { // Must implement Parcelable so it can be sent to a new acitivy as an object
 
     // Attributes
     private String name;
@@ -12,7 +12,7 @@ public class Franchise { // Must implement Parcelable so it can be sent to a new
     private String cal;
     private String image;
 
-    public Franchise(String name, String description, String price, String gluten, String cal, String image) { // Constructor
+    public MenuItem(String name, String description, String price, String gluten, String cal, String image) { // Constructor
         this.name = name;
         this.description = description;
         this.price = price;

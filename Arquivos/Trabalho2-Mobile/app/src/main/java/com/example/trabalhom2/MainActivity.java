@@ -2,24 +2,16 @@ package com.example.trabalhom2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.text.TextUtils;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.SearchView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity {
     private ListView franchisesListView; // ListView for the franchises
-    private ArrayList<Franchise> franchises = new ArrayList<>(); // Array with franchises
+    private ArrayList<MenuItem> menuItems = new ArrayList<>(); // Array with franchises
     private Adapter adapter; // Adapter for the franchises
 
 
@@ -32,11 +24,10 @@ public class MainActivity extends AppCompatActivity {
 
         addFranchises(); // Add franchises to the array of franchises
 
-        adapter = new Adapter(this, franchises); // Creates adapter
+        adapter = new Adapter(this, menuItems); // Creates adapter
         franchisesListView.setAdapter(adapter); // Set adapter, responsible for filling the listview with the franchises
 
     }
-
 
     public void addFranchises(){
         franchisesListView = (ListView) findViewById(R.id.franchisesListView); // Get listview
@@ -47,9 +38,9 @@ public class MainActivity extends AppCompatActivity {
         Cursor cursor = dbHelper.ViewData();
 
         while(cursor.moveToNext()){
-            Franchise menuItem = new Franchise(cursor.getString(1), cursor.getString(2), cursor.getString(3),  cursor.getString(4), cursor.getString(5), cursor.getString(6));
+            MenuItem menuItem = new MenuItem(cursor.getString(1), cursor.getString(2), cursor.getString(3),  cursor.getString(4), cursor.getString(5), cursor.getString(6));
 
-            this.franchises.add(menuItem);
+            this.menuItems.add(menuItem);
         }
     }
 }
