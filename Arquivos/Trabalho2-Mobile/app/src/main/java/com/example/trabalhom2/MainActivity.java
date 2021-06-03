@@ -42,16 +42,23 @@ public class MainActivity extends AppCompatActivity {
         franchisesListView = (ListView) findViewById(R.id.franchisesListView); // Get listview
 
         DbHelper dbHelper = new DbHelper(MainActivity.this);
-        dbHelper.saveData("nome", "decricao", (float) 200.50, true, 300);
+        dbHelper.saveData("nome2", "decricao2", "200.50", "sim", "300", "pizzahut");
 
         Cursor cursor = dbHelper.ViewData();
 
 
         // Declaration of restaurants
+        while(cursor.moveToNext()){
+            Franchise menuItem = new Franchise(cursor.getString(1), cursor.getString(2), cursor.getString(3),  cursor.getString(4), cursor.getString(5), cursor.getString(6));
 
-        Franchise burgerking = new Franchise("nome", "descricao", (float) 200.50, true, 200);
+            this.franchises.add(menuItem);
+        }
 
-        this.franchises.add(burgerking);
+
+
+        /*Franchise burgerking = new Franchise("nome", "descricao", (float) 200.50, true, 200);
+
+        this.franchises.add(burgerking);*/
 
     }
 }

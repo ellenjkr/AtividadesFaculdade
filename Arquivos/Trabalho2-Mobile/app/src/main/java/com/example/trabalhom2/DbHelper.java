@@ -12,7 +12,7 @@ import androidx.annotation.Nullable;
 public class DbHelper extends SQLiteOpenHelper {
 
     private Context context;
-    private static final String dbname = "restaurant.db"; // set the database name
+    private static final String dbname = "restaurantDataBase.db"; // set the database name
     private static final String tableName = "menu";
 
     private static final String column_id = "_id";
@@ -21,6 +21,7 @@ public class DbHelper extends SQLiteOpenHelper {
     private static final String column_price = "price";
     private static final String column_gluten = "gluten";
     private static final String column_cal = "cal";
+    private static final String column_image = "image";
 
 
     public DbHelper(Context context) {
@@ -33,8 +34,8 @@ public class DbHelper extends SQLiteOpenHelper {
         String query = "CREATE TABLE " + tableName +
                 " (" + column_id + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 column_name + " TEXT, " + column_description + " TEXT, " +
-                column_price + " FLOAT, " + column_gluten + " BOOL, " +
-                column_cal + " INTEGER);";
+                column_price + " TEXT, " + column_gluten + " TEXT, " +
+                column_cal + " TEXT, " + column_image + " TEXT);";
         db.execSQL(query);
     }
 
@@ -44,7 +45,7 @@ public class DbHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    void saveData(String name, String description, float price, boolean gluten, int cal){
+    void saveData(String name, String description, String price, String gluten, String cal, String image){
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
 
         ContentValues contentValues = new ContentValues();
@@ -54,6 +55,7 @@ public class DbHelper extends SQLiteOpenHelper {
         contentValues.put(column_price, price);
         contentValues.put(column_gluten, gluten);
         contentValues.put(column_cal, cal);
+        contentValues.put(column_image, image);
 
         long result = sqLiteDatabase.insert(tableName, null, contentValues);
 

@@ -7,16 +7,18 @@ public class Franchise { // Must implement Parcelable so it can be sent to a new
     // Attributes
     private String name;
     private String description;
-    private float price;
-    private boolean gluten;
-    private int cal;
+    private String price;
+    private String gluten;
+    private String cal;
+    private String image;
 
-    public Franchise(String name, String description, float price, boolean gluten, int cal) { // Constructor
+    public Franchise(String name, String description, String price, String gluten, String cal, String image) { // Constructor
         this.name = name;
         this.description = description;
         this.price = price;
         this.gluten = gluten;
         this.cal = cal;
+        this.image = image;
     }
 
     // Get
@@ -28,15 +30,19 @@ public class Franchise { // Must implement Parcelable so it can be sent to a new
         return this.description;
     }
 
-    public float getPrice() {
+    public String getPrice() {
         return this.price;
     }
 
-    public boolean getGluten() {
+    public String getGluten() {
         return this.gluten;
     }
 
-    public int getCal() {
+    public String getCal() {
         return this.cal;
+    }
+
+    public String getImage() {
+        return this.image;
     }
 }
