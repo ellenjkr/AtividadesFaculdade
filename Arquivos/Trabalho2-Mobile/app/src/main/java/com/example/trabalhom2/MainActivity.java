@@ -33,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
         menuItemsListView = (ListView) findViewById(R.id.menuItemsListView); // Get listview
 
         DbHelper dbHelper = new DbHelper(MainActivity.this); // Get the db helper
-        //dbHelper.saveData("nome2", "decricao2", "200.50", "sim", "300", "pizzahut"); // Add new line to the database
+        // dbHelper.saveData("Suco de Laranja", "Suco de laranja natural 200ml", "4", "não", "86", "suquinho"); // Add new line to the database
+
 
         Cursor cursor = dbHelper.ViewData(); // Get the cursor to view the data
 
