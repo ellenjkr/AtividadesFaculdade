@@ -49,6 +49,9 @@ public class Adapter extends BaseAdapter {
         ImageView image = (ImageView) menuItem.findViewById(R.id.imageViewMenuItem);
         TextView name = (TextView) menuItem.findViewById(R.id.textViewName);
         TextView description = (TextView) menuItem.findViewById(R.id.textViewDescription);
+        TextView gluten = (TextView) menuItem.findViewById(R.id.textViewGluten);
+        TextView cal = (TextView) menuItem.findViewById(R.id.textViewCal);
+        TextView price = (TextView) menuItem.findViewById(R.id.textViewPrice);
 
         MenuItem currentMenuItem = menuItems.get(position); // Get a menu item from the list of menu items
 
@@ -57,6 +60,9 @@ public class Adapter extends BaseAdapter {
         image.setImageResource(imageID);
         name.setText(currentMenuItem.getName());
         description.setText(currentMenuItem.getDescription());
+        gluten.setText("Contém Gluten? " + currentMenuItem.getGluten());
+        cal.setText("Calorias: " + currentMenuItem.getCal());
+        price.setText("R$ " + currentMenuItem.getPrice());
 
         return menuItem;
     }

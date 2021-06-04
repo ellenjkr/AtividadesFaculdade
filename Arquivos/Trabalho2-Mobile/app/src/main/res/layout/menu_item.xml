@@ -38,4 +38,47 @@
         android:gravity="center_vertical"
         tools:ignore="RtlCompat"/>
 
+    <TextView
+        android:id="@+id/textViewGluten"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp"
+        android:layout_alignTop="@id/imageViewMenuItem"
+        android:layout_toRightOf="@id/imageViewMenuItem"
+        android:textSize="12sp"
+        android:gravity="center_vertical"
+        tools:ignore="RtlCompat"/>
+
+    <TextView
+        android:id="@+id/textViewCal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp"
+        android:layout_alignTop="@id/imageViewMenuItem"
+        android:layout_toRightOf="@id/imageViewMenuItem"
+        android:textSize="12sp"
+        android:gravity="center_vertical"
+        tools:ignore="RtlCompat"/>
+
+    <TextView
+        android:id="@+id/textViewPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp"
+        android:layout_alignTop="@id/imageViewMenuItem"
+        android:layout_toRightOf="@id/imageViewMenuItem"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:gravity="center_vertical"
+        tools:ignore="RtlCompat"/>
+
 </RelativeLayout>
