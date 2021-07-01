@@ -63,9 +63,30 @@ public class Time extends Exception{
             return true;
         }
     }
-    public boolean removJogador(int index){
-       if(this.atacantes.size){
-            this.
+    public boolean removeAtacante(int index){
+       if(this.atacantes.size()>0){
+            this.atacantes.remove(index);
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+    public boolean removeDefensor(int index){
+       if(this.defensores.size()>0){
+            this.defensores.remove(index);
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+    public boolean removeGoleiro(int index){
+       if(this.goleiro!=null){
+            this.goleiro=null;
+            return true;
+        }else{
+            return false;
         }
 
     }

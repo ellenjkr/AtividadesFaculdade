@@ -12,13 +12,13 @@
 ->velocidade
 ->tecnica
  */
-
+import java.time.LocalDate;
 public class Atacante extends Jogador{
     int velocidade;
     int tecnica;
 
-    public Atacante(int gols, String nome, int idade, int numeroCamisa, int velocidade, int tecnica) {
-    super(gols,nome,idade,numeroCamisa);
+    public Atacante(int gols, String nome, LocalDate nascimento, int numeroCamisa, int velocidade, int tecnica) {
+    super(gols,nome,nascimento,numeroCamisa);
         this.velocidade = velocidade;
         this.tecnica = tecnica;
     }

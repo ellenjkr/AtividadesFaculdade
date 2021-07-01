@@ -10,7 +10,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-
+import java.time.LocalDate;
 /**
  *
  * @author Pichau
@@ -19,7 +19,7 @@ public class DefensorTest {
     
     @Test
     public void testGetHabilidade() {
-        Defensor defensor = new Defensor(0,"ellen",100,7,80,100);
+        Defensor defensor = new Defensor(0,"ellen",LocalDate.of(2000, 12, 23),7,80,100);
         int expResult = (80 * 6) + (100 * 4);
         int result = defensor.getHabilidade();
         assertEquals(expResult, result);

@@ -18,12 +18,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-
+import java.time.LocalDate;
 public class GoleiroTest {
   
     @Test
     public void testGetHabilidade() {
-        Goleiro goleiro = new Goleiro(0,"kessy",100,7,181,90);
+        Goleiro goleiro = new Goleiro(0,"kessy",LocalDate.of(2000, 12, 23),7,181,90);
         int expResult = (86 * 4) + (90 * 6);
         int result = goleiro.getHabilidade();
         assertEquals(expResult, result);
@@ -34,7 +34,7 @@ public class GoleiroTest {
         int altura = 181;
         BigDecimal expResult = BigDecimal.valueOf(86).setScale(2);
         
-        Goleiro goleiro = new Goleiro(0,"kessy",100,7,181,90);
+        Goleiro goleiro = new Goleiro(0,"kessy",LocalDate.of(2000, 12, 23),7,181,90);
         BigDecimal result = goleiro.calculaNotaAltura(goleiro.getAltura());
         
         assertEquals(expResult, result);

@@ -12,46 +12,117 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-
+import java.time.LocalDate;
 /**
  *
  * @author Pichau
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class TimeTest {
-    private static final Atacante atacante1 = new Atacante(0,"mateus",100,7,100,100);
-    private static final Atacante atacante2 = new Atacante(0,"ellen",100,7,100,100);
+    private static final Atacante atacante1 = new Atacante(0,"mateus",LocalDate.of(2000, 12, 23),7,100,100);
+    private static final Atacante atacante2 = new Atacante(0,"ellen",LocalDate.of(2000, 12, 23),7,100,100);
 
-    private static final Defensor defensor1 = new Defensor(0,"mateus",100,7,100,100);
-    private static final Defensor defensor2 = new Defensor(0,"ellen",100,7,100,100);
+    private static final Defensor defensor1 = new Defensor(0,"mateus",LocalDate.of(2000, 12, 23),7,100,100);
+    private static final Defensor defensor2 = new Defensor(0,"ellen",LocalDate.of(2000, 12, 23),7,100,100);
         
-    private static final Goleiro goleiro1 = new Goleiro(0,"mateus",100,7,100,100);
+    private static final Goleiro goleiro1 = new Goleiro(0,"mateus",LocalDate.of(2000, 12, 23),7,100,100);
         
-    private static final Time time1 = new Time("time 1");
+    private static Time time1;
+
+    private static Time time2;
     
     @BeforeAll
     public static void setUp() {
+        time1 = new Time("time 1");
+        time2 = new Time("time 2");
         time1.adicionarAtacante(atacante1);
         time1.adicionarAtacante(atacante2);
         time1.adicionarDefensor(defensor1);
         time1.adicionarDefensor(defensor2);
         time1.adicionarGoleiro(goleiro1);
+
+        
     }
     
     @Test
     public void testAdicionarDefensor() {
-       assertEquals(false, time1.adicionarDefensor(defensor1));
+       this.time2.adicionarDefensor(defensor1);
+       assertEquals(true, this.time2.adicionarDefensor(defensor2));
+    }
+    
+    
+    @Test
+    public void testAdicionarDefensorFalse() {     
+       this.time2.adicionarDefensor(defensor1);
+       this.time2.adicionarDefensor(defensor2);
+       assertEquals(false, this.time2.adicionarDefensor(defensor2));
+    }
+  
+    @Test
+    public void testRemoverDefensor() {
+        this.time2.adicionarDefensor(defensor1);
+        assertEquals(true, this.time2.removeDefensor(0));
+    }
+    @Test
+    public void testRemoverDefensorFalse() {
+        this.time2.removeDefensor(0);
+        assertEquals(false, this.time2.removeDefensor(0));
     }
 
     @Test
     public void testAdicionarAtacante() {
-       assertEquals(false, time1.adicionarAtacante(atacante1));
+       this.time2.adicionarAtacante(atacante1);
+       assertEquals(true, this.time2.adicionarAtacante(atacante2));
+    }
+
+
+    @Test
+    public void testAdicionarAtacanteFalse() {
+       this.time2.adicionarAtacante(atacante1);
+       this.time2.adicionarAtacante(atacante2);
+       assertEquals(false, this.time2.adicionarAtacante(atacante2));
+    }
+
+    @Test
+    public void testRemoverAtacante() {
+        this.time2.adicionarAtacante(atacante1);
+        assertEquals(true, this.time2.removeAtacante(0));
+    }
+    @Test
+    public void testRemoverAtacanteFalse() {
+        this.time2.removeAtacante(0);
+        assertEquals(false, this.time2.removeAtacante(0));
     }
 
     @Test
     public void testAdicionarGoleiro() {
-       assertEquals(false, time1.adicionarGoleiro(goleiro1));
+
+       assertEquals(true, this.time2.adicionarGoleiro(goleiro1));
     }
+
+
+    @Test
+    public void testAdicionarGoleiroFalse() {
+       this.time2.adicionarGoleiro(goleiro1);
+       assertEquals(false, this.time2.adicionarGoleiro(goleiro1));
+    }
+
+    @Test
+    public void testRemoverGoleiro() {
+        this.time2.adicionarGoleiro(goleiro1);
+        assertEquals(true, this.time2.removeGoleiro(0));
+    }
+    @Test
+    public void testRemoverGoleiroFalse() {
+        this.time2.adicionarGoleiro(goleiro1);
+        this.time2.removeGoleiro(0);
+        assertEquals(false, this.time2.removeGoleiro(0));
+    }
+
+
+
+
+    
 
     @Test
     public void testResultados() {

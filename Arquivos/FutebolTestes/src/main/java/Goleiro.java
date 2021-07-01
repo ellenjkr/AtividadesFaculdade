@@ -8,7 +8,7 @@
  *
  * @author Pichau
  */
-
+import java.time.LocalDate;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
@@ -17,8 +17,8 @@ public class Goleiro extends Jogador{
     int altura;
     int reflexos;
 
-    public Goleiro(int gols, String nome, int idade, int numeroCamisa,int altura, int reflexos) {
-    super(gols,nome,idade,numeroCamisa);
+    public Goleiro(int gols, String nome, LocalDate nascimento, int numeroCamisa,int altura, int reflexos) {
+    super(gols,nome,nascimento,numeroCamisa);
         this.altura = altura;
         this.notaAltura = this.calculaNotaAltura(this.altura);
         this.reflexos = reflexos;

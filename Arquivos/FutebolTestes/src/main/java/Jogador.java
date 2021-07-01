@@ -8,15 +8,16 @@
  *
  * @author Pichau
  */
+import java.time.LocalDate;
 public class Jogador{
     int gols;
     String nome;
     int idade;
     int numeroCamisa;
     
-    public Jogador(int gols, String nome, int idade, int numeroCamisa){
+    public Jogador(int gols, String nome, LocalDate nascimento, int numeroCamisa){
         this.gols = gols;
-        this.idade = idade;
+        this.idade = Idade.calculaIdade(nascimento, LocalDate.of(2021, 7, 1));
         this.nome = nome;
         this.numeroCamisa = numeroCamisa;
     }

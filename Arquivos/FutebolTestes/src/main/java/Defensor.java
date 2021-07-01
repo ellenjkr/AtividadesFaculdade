@@ -8,12 +8,13 @@
  *
  * @author Pichau
  */
+import java.time.LocalDate;
 public class Defensor extends Jogador{
     int cobertura;
     int desarme;
 
-    public Defensor(int gols, String nome, int idade, int numeroCamisa,int cobertura, int desarme) {
-    super(gols,nome,idade,numeroCamisa);
+    public Defensor(int gols, String nome, LocalDate nascimento, int numeroCamisa,int cobertura, int desarme) {
+    super(gols,nome,nascimento,numeroCamisa);
         this.cobertura = cobertura;
         this.desarme = desarme;
     }

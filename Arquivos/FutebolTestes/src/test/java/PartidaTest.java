@@ -12,20 +12,20 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import static org.junit.jupiter.api.Assertions.*;
-
+import java.time.LocalDate;
 /**
  *
  * @author Pichau
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class PartidaTest {
-    private static final Atacante atacante1 = new Atacante(0,"mateus",100,7,100,100);
-    private static final Atacante atacante2 = new Atacante(0,"ellen",100,7,100,100);
+    private static final Atacante atacante1 = new Atacante(0,"mateus",LocalDate.of(2000, 12, 23),7,100,100);
+    private static final Atacante atacante2 = new Atacante(0,"ellen",LocalDate.of(2000, 12, 23),7,100,100);
 
-    private static final Defensor defensor1 = new Defensor(0,"mateus",100,7,100,100);
-    private static final Defensor defensor2 = new Defensor(0,"ellen",100,7,100,100);
+    private static final Defensor defensor1 = new Defensor(0,"mateus",LocalDate.of(2000, 12, 23),7,100,100);
+    private static final Defensor defensor2 = new Defensor(0,"ellen",LocalDate.of(2000, 12, 23),7,100,100);
 
-    private static final Goleiro goleiro1 = new Goleiro(0,"mateus",100,7,100,100);
+    private static final Goleiro goleiro1 = new Goleiro(0,"mateus",LocalDate.of(2000, 12, 23),7,100,100);
 
     private static final Time time1 = new Time("time 1");
     private static final Time time2 = new Time("time 2");
