@@ -17,8 +17,8 @@ public class Goleiro extends Jogador{
     int altura;
     int reflexos;
 
-    public Goleiro(int nota, int gols, String nome, int idade, int numeroCamisa,int altura, int reflexos) {
-    super(nota,gols,nome,idade,numeroCamisa);
+    public Goleiro(int gols, String nome, int idade, int numeroCamisa,int altura, int reflexos) {
+    super(gols,nome,idade,numeroCamisa);
         this.altura = altura;
         this.notaAltura = this.calculaNotaAltura(this.altura);
         this.reflexos = reflexos;
@@ -26,28 +26,29 @@ public class Goleiro extends Jogador{
     
     public BigDecimal calculaNotaAltura(int altura){
         if(altura >= 210){
-            var notaAlturaArredondada = BigDecimal.valueOf(100);
+            BigDecimal notaAlturaArredondada = BigDecimal.valueOf(100);
             return notaAlturaArredondada;
         }
         else{
-            int notaAltura;
-            notaAltura = (altura*100)/210
-            var notaAlturaArredondada = BigDecimal.valueOf(notaAltura).setScale(2, RoundingMode.HALF_EVEN);
+            float notaAltura;
+            notaAltura = (altura*100)/210;
+            BigDecimal notaAlturaArredondada = BigDecimal.valueOf(notaAltura).setScale(2, RoundingMode.HALF_EVEN);
             return notaAlturaArredondada;
         }
     }
-
+    
     public int getHabilidade(){
-        int resultado = 0;
-        resultado = (this.notaAltura * 4) + (this.reflexos * 6);
-        return resultado;
+        BigDecimal resultado = BigDecimal.ZERO;
+        resultado = this.notaAltura.multiply(BigDecimal.valueOf(4)).add(BigDecimal.valueOf(this.reflexos*6));
+        int resultadoInt = resultado.intValue();
+        return resultadoInt;
     }
 
     public int getAltura(){
         return this.altura;
     }
 
-    public int getNotaAltura(){
+    public BigDecimal getNotaAltura(){
         return this.notaAltura;
     }
 

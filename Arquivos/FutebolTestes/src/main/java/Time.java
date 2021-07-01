@@ -98,8 +98,6 @@ public class Time {
        }
        forca+=this.goleiro.getHabilidade();
        
-
-       
        return forca;
    }
    

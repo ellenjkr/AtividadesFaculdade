@@ -17,8 +17,8 @@ public class Atacante extends Jogador{
     int velocidade;
     int tecnica;
 
-    public Atacante(int nota, int gols, String nome, int idade, int numeroCamisa,int velocidade, int tecnica) {
-    super(nota,gols,nome,idade,numeroCamisa);
+    public Atacante(int gols, String nome, int idade, int numeroCamisa, int velocidade, int tecnica) {
+    super(gols,nome,idade,numeroCamisa);
         this.velocidade = velocidade;
         this.tecnica = tecnica;
     }

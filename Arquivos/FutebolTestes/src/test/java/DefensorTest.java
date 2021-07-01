@@ -19,10 +19,9 @@ public class DefensorTest {
     
     @Test
     public void testGetHabilidade() {
-        Defensor defensor = new Defensor(0,0,"ellen",100,7,80,100);
+        Defensor defensor = new Defensor(0,"ellen",100,7,80,100);
         int expResult = (80 * 6) + (100 * 4);
         int result = defensor.getHabilidade();
         assertEquals(expResult, result);
-        fail("The test case is a prototype.");
     }    
 }

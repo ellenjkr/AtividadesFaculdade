@@ -12,8 +12,8 @@ public class Defensor extends Jogador{
     int cobertura;
     int desarme;
 
-    public Defensor(int nota, int gols, String nome, int idade, int numeroCamisa,int cobertura, int desarme) {
-    super(nota,gols,nome,idade,numeroCamisa);
+    public Defensor(int gols, String nome, int idade, int numeroCamisa,int cobertura, int desarme) {
+    super(gols,nome,idade,numeroCamisa);
         this.cobertura = cobertura;
         this.desarme = desarme;
     }

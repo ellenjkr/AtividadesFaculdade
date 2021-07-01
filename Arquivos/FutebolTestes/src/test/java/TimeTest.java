@@ -9,6 +9,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -16,26 +17,36 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  * @author Pichau
  */
-@TestInstance(TestInstance.LifeCycle.PER_CLASS)
-class TimeTest {
-    private final Atacante atacante1 = new Atacante(0,0,"mateus",100,7,100,100);
-    private final Atacante atacante2 = new Atacante(0,0,"ellen",100,7,100,100);
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+public class TimeTest {
+    private static final Atacante atacante1 = new Atacante(0,"mateus",100,7,100,100);
+    private static final Atacante atacante2 = new Atacante(0,"ellen",100,7,100,100);
 
-    private final Defensor defensor1 = new Defensor(0,0,"mateus",100,7,100,100);
-    private final Defensor defensor2 = new Defensor(0,0,"ellen",100,7,100,100);
+    private static final Defensor defensor1 = new Defensor(0,"mateus",100,7,100,100);
+    private static final Defensor defensor2 = new Defensor(0,"ellen",100,7,100,100);
         
-    private final Goleiro goleiro1 = new Goleiro(0,0,"mateus",100,7,100,100);
+    private static final Goleiro goleiro1 = new Goleiro(0,"mateus",100,7,100,100);
         
-    private final Time time1 = new Time("time 1");
-
+    private static final Time time1 = new Time("time 1");
+    
     @BeforeAll
-    public static void init() {
+    public static void setUp() {
         time1.adicionarAtacante(atacante1);
         time1.adicionarAtacante(atacante2);
         time1.adicionarDefensor(defensor1);
         time1.adicionarDefensor(defensor2);
         time1.adicionarGoleiro(goleiro1);
     }
+    /*
+    @Test
+    public void testAdicionarDefensor() {
+    }
+    @Test
+    public void testAdicionarAtacante() {
+    }
+    @Test
+    public void testAdicionarGoleiro() {
+    }*/
 
     @Test
     public void testResultados() {
@@ -55,7 +66,7 @@ class TimeTest {
         int result = time1.resultados();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
    
@@ -66,13 +77,16 @@ class TimeTest {
        int habilidadeAtacante2 = atacante2.getHabilidade();
        int habilidadeDefensor1 = defensor1.getHabilidade();
        int habilidadeDefensor2 = defensor2.getHabilidade();
-       int habilidadeGoleiro = goleiro.getHabilidade();
+       int habilidadeGoleiro = goleiro1.getHabilidade();
        
        expResult += habilidadeAtacante1 + habilidadeAtacante2 + habilidadeDefensor1 + habilidadeDefensor2 + habilidadeGoleiro;
+       
+
        int result = time1.calculaForca();
+       
        assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype."); 
+        //fail("The test case is a prototype."); 
     }
 
 /*

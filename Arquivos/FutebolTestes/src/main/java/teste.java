@@ -20,13 +20,13 @@ public class teste {
         int sorteio;
         sorteio = (int) ( Math.random() * 100 ) + 1;
         
-        Atacante atacante1 = new Atacante(0,0,"mateus",100,7,100,100);
-        Atacante atacante2 = new Atacante(0,0,"ellen",100,7,100,100);
+        Atacante atacante1 = new Atacante(0,"mateus",100,7,100,100);
+        Atacante atacante2 = new Atacante(0,"ellen",100,7,100,100);
 
-        Defensor defensor1 = new Defensor(0,0,"mateus",100,7,100,100);
-        Defensor defensor2 = new Defensor(0,0,"ellen",100,7,100,100);
+        Defensor defensor1 = new Defensor(0,"mateus",100,7,100,100);
+        Defensor defensor2 = new Defensor(0,"ellen",100,7,100,100);
         
-        Goleiro goleiro1 = new Goleiro(0,0,"mateus",100,7,100,100);
+        Goleiro goleiro1 = new Goleiro(0,"mateus",100,7,100,100);
         
         Time time1 = new Time("time 1");
         

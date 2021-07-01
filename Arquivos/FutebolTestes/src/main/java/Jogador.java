@@ -9,22 +9,16 @@
  * @author Pichau
  */
 public class Jogador{
-    int nota;
     int gols;
     String nome;
     int idade;
     int numeroCamisa;
     
-    public Jogador( int nota, int gols, String nome, int idade, int numeroCamisa){
-        this.nota = nota;
+    public Jogador(int gols, String nome, int idade, int numeroCamisa){
         this.gols = gols;
         this.idade = idade;
         this.nome = nome;
         this.numeroCamisa = numeroCamisa;
-    }
-    
-    public void setNota( int nota ){
-        this.nota = nota;
     }
     
     public void setGols( int gols ){
@@ -41,10 +35,6 @@ public class Jogador{
     
     public void setNumeroCamisa( int numeroCamisa ){
         this.numeroCamisa = numeroCamisa;
-    }
-    
-    public int getNota(){
-        return this.nota;
     }
     
     public int getGols(){

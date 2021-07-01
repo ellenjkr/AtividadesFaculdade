@@ -37,19 +37,6 @@ public class JogadorTest {
     }
 
     /**
-     * Test of setNota method, of class Jogador.
-     */
-    @Test
-    public void testSetNota() {
-        System.out.println("setNota");
-        int nota = 0;
-        Jogador instance = null;
-        instance.setNota(nota);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
      * Test of setGols method, of class Jogador.
      */
     @Test
@@ -101,20 +88,7 @@ public class JogadorTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of getNota method, of class Jogador.
-     */
-    @Test
-    public void testGetNota() {
-        System.out.println("getNota");
-        Jogador instance = null;
-        int expResult = 0;
-        int result = instance.getNota();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
+   
     /**
      * Test of getGols method, of class Jogador.
      */
@@ -129,9 +103,7 @@ public class JogadorTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of getNome method, of class Jogador.
-     */
+
     @Test
     public void testGetNome() {
         System.out.println("getNome");

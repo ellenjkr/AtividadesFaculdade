@@ -23,22 +23,20 @@ public class GoleiroTest {
   
     @Test
     public void testGetHabilidade() {
-        Goleiro goleiro = new Goleiro(0,0,"kessy",100,7,181,90);
+        Goleiro goleiro = new Goleiro(0,"kessy",100,7,181,90);
         int expResult = (86 * 4) + (90 * 6);
         int result = goleiro.getHabilidade();
         assertEquals(expResult, result);
-        fail("The test case is a prototype.");
     }
     
     @Test
     public void testCalculaNotaAltura(){
         int altura = 181;
-        var expResult = BigDecimal.valueOf(86);
+        BigDecimal expResult = BigDecimal.valueOf(86).setScale(2);
         
-        Goleiro goleiro = new Goleiro(0,0,"kessy",100,7,181,90)
-        var result = goleiro.calculaNotaAltura(goleiro.getAltura());
+        Goleiro goleiro = new Goleiro(0,"kessy",100,7,181,90);
+        BigDecimal result = goleiro.calculaNotaAltura(goleiro.getAltura());
         
         assertEquals(expResult, result);
-        fail("The test case is a prototype.");
     }
 }
