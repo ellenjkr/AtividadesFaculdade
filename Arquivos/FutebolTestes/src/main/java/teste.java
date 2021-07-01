@@ -20,7 +20,7 @@ public class teste {
         int sorteio;
         sorteio = (int) ( Math.random() * 100 ) + 1;
         
-        Atacante atacante1 = new Atacante(0,"mateus",100,7,100,100);
+        /*Atacante atacante1 = new Atacante(0,"mateus",100,7,100,100);
         Atacante atacante2 = new Atacante(0,"ellen",100,7,100,100);
 
         Defensor defensor1 = new Defensor(0,"mateus",100,7,100,100);
@@ -48,7 +48,7 @@ public class teste {
         Partida partida1 = new Partida(data, time1, time2);
         for(int i=0;i<10;i++){
             System.out.println(new Partida(data, time1, time2).Simulacao());
-        } 
+        } */
        
        
        

@@ -37,16 +37,21 @@ public class TimeTest {
         time1.adicionarDefensor(defensor2);
         time1.adicionarGoleiro(goleiro1);
     }
-    /*
+    
     @Test
     public void testAdicionarDefensor() {
+       assertEquals(false, time1.adicionarDefensor(defensor1));
     }
+
     @Test
     public void testAdicionarAtacante() {
+       assertEquals(false, time1.adicionarAtacante(atacante1));
     }
+
     @Test
     public void testAdicionarGoleiro() {
-    }*/
+       assertEquals(false, time1.adicionarGoleiro(goleiro1));
+    }
 
     @Test
     public void testResultados() {
@@ -85,21 +90,20 @@ public class TimeTest {
        int result = time1.calculaForca();
        
        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype."); 
     }
 
-/*
     @Test
     public void testGolDe() {
-        int tipo = 1;
-        int local = 0;
+        int tipo = 1; // atacante
+        int local = 0; // posição
         
-        int expResult = time1.atacantes.get(0).gols 
+        int golsAtacante1 = atacante1.getGols();
         
+        time1.golDe(tipo, local); // primeiro atacante fez gol
 
-        instance.golDe(tipo, local);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }*/
+        int expResult = golsAtacante1 + 1;
+        int result = atacante1.getGols(); // gols do primeiro atacante
+
+        assertEquals(expResult, result);
+    }
 }

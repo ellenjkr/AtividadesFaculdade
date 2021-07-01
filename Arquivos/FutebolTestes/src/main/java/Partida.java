@@ -35,7 +35,7 @@ public class Partida {
         return this.golsVisitante;
     }
     
-    public String Simulacao(){
+    public void Simulacao(){
         int random = (int) ( Math.random() * 10 ) ;
         //System.out.println("golzão"+random);
         for(int i = 0; i < random; i++){
@@ -47,7 +47,9 @@ public class Partida {
                 this.golsVisitante++;
             }
         }
+    }
 
+    public String defineVencedor(){
         if(this.golsCasa>this.golsVisitante){
             this.casa.setVitoria();
             this.visitante.setDerrota();

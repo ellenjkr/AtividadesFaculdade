@@ -17,7 +17,9 @@ import java.util.ArrayList;
  *
  * @author mateu
  */
-public class Time {
+
+
+public class Time extends Exception{
     public String nome;    
     public Goleiro goleiro;
     private ArrayList<Defensor> defensores= new ArrayList<Defensor>();
@@ -34,29 +36,39 @@ public class Time {
         this.derrotas=0;
     }
     
-    public void adicionarDefensor(Defensor defensor){
-        if(this.defensores.size()>2){
-            System.out.println("Ja existem mais de dois defensores");
+    public boolean adicionarDefensor(Defensor defensor){
+        if(this.defensores.size()>=2){
+            return false;
         }else{
             this.defensores.add(defensor);
+            return true;
         }
     }
     
-    public void adicionarAtacante(Atacante atacante){
-        if(this.atacantes.size()>2){
-            System.out.println("Ja existem mais de dois atacantes");
+    
+    public boolean adicionarAtacante(Atacante atacante){
+        if(this.atacantes.size()>=2){
+            return false;
         }else{
             this.atacantes.add(atacante);
+            return true;
         }
     }
     
-    public void adicionarGoleiro(Goleiro goleiro){
+    public boolean adicionarGoleiro(Goleiro goleiro){
         if(this.goleiro!=null){
-            System.out.println("Ja existe um goleiro na equipe");
+            return false;
         }else{
             this.goleiro=goleiro;
+            return true;
         }
-    }    
+    }
+    public boolean removJogador(int index){
+       if(this.atacantes.size){
+            this.
+        }
+
+    }
         
     public ArrayList<Defensor> getDefensores(){
         return defensores;
@@ -108,8 +120,6 @@ public class Time {
            }else{
                this.atacantes.get(1).gols++;
            }           
-           
-           
        }else if(tipo ==2){
            
            if(local==0){
@@ -117,8 +127,6 @@ public class Time {
            }else{
                this.defensores.get(1).gols++;
            }
-           
-           
        }else{
            this.goleiro.gols++;
        

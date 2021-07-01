@@ -53,14 +53,24 @@ public class PartidaTest {
     
     @Test
     public void testSimulacao() {
-        System.out.println("Simulacao");
-        /*
-        Partida instance = null;
-        String expResult = "";
-        String result = instance.Simulacao();
-        assertEquals(expResult, result);*/
-        // TODO review the generated test code and remove the default call to fail.
-       
+        partida1.Simulacao();
+        int golsCasa = partida1.golsCasa;
+        int golsVisitante = partida1.golsVisitante;
+        
+        String expResult;
+        if(golsCasa > golsVisitante){
+            expResult = partida1.casa.nome;
+        }
+        else if (golsCasa < golsVisitante){
+            expResult = partida1.visitante.nome;
+        }
+        else{
+            expResult="empate";
+        }
+        
+        String result = partida1.defineVencedor();
+        
+        assertEquals(expResult, result);
     }
     
 }
