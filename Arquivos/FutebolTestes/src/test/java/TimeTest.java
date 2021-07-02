@@ -19,16 +19,15 @@ import java.time.LocalDate;
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class TimeTest {
-    private static final Atacante atacante1 = new Atacante(0,"mateus",LocalDate.of(2000, 12, 23),7,100,100);
-    private static final Atacante atacante2 = new Atacante(0,"ellen",LocalDate.of(2000, 12, 23),7,100,100);
+    private static final Atacante atacante1 = new Atacante(0,"mateus",LocalDate.of(2000, 12, 23),7,98,90);
+    private static final Atacante atacante2 = new Atacante(0,"ellen",LocalDate.of(2000, 12, 23),8,85,70);
 
-    private static final Defensor defensor1 = new Defensor(0,"mateus",LocalDate.of(2000, 12, 23),7,100,100);
-    private static final Defensor defensor2 = new Defensor(0,"ellen",LocalDate.of(2000, 12, 23),7,100,100);
+    private static final Defensor defensor1 = new Defensor(0,"mateus",LocalDate.of(2000, 12, 23),12,100,65);
+    private static final Defensor defensor2 = new Defensor(0,"ellen",LocalDate.of(2000, 12, 23),6,78,95);
         
-    private static final Goleiro goleiro1 = new Goleiro(0,"mateus",LocalDate.of(2000, 12, 23),7,100,100);
+    private static final Goleiro goleiro1 = new Goleiro(0,"mateus",LocalDate.of(2000, 12, 23),9,179,90);
         
     private static Time time1;
-
     private static Time time2;
     
     @BeforeAll
@@ -40,8 +39,6 @@ public class TimeTest {
         time1.adicionarDefensor(defensor1);
         time1.adicionarDefensor(defensor2);
         time1.adicionarGoleiro(goleiro1);
-
-        
     }
     
     @Test
@@ -49,7 +46,6 @@ public class TimeTest {
        this.time2.adicionarDefensor(defensor1);
        assertEquals(true, this.time2.adicionarDefensor(defensor2));
     }
-    
     
     @Test
     public void testAdicionarDefensorFalse() {     
@@ -96,7 +92,6 @@ public class TimeTest {
 
     @Test
     public void testAdicionarGoleiro() {
-
        assertEquals(true, this.time2.adicionarGoleiro(goleiro1));
     }
 
@@ -121,8 +116,6 @@ public class TimeTest {
 
 
 
-
-    
 
     @Test
     public void testResultados() {
