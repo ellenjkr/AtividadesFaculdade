@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/FirstImage"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="26dp"
+        android:src="@drawable/imageicon"/>
+
+    <Button
+        android:id="@+id/FirstButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/FirstImage"
+        android:layout_marginTop="50dp"
+        android:text="Câmera"/>
+
+    <ImageView
+        android:id="@+id/SecondImage"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_below="@id/FirstImage"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="26dp"
+        android:src="@drawable/imageicon"/>
+
+    <Button
+        android:id="@+id/SecondButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/SecondImage"
+        android:layout_alignTop="@id/SecondImage"
+        android:layout_marginTop="25dp"
+        android:text="Câmera"/>
+
+    <ImageView
+        android:id="@+id/ThirdImage"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_below="@id/SecondImage"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="26dp"
+        android:src="@drawable/imageicon"/>
+
+    <Button
+        android:id="@+id/ThirdButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ThirdImage"
+        android:layout_alignTop="@id/ThirdImage"
+        android:layout_marginTop="25dp"
+        android:text="Câmera"/>
+
+</RelativeLayout>
