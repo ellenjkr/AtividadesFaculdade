@@ -1,4 +1,4 @@
-# Autoes: Ellen Junker, Kessy Roberta Staub e Mateus da Silva Francelino
+# Autores: Ellen Junker, Kessy Roberta Staub e Mateus da Silva Francelino
 # Data: 12/10/2021
 
 import cv2
