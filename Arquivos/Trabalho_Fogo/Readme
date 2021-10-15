@@ -1,0 +1,11 @@
+Dependências:
+-Linguagem: Python
+-Biblioteca OpenCV
+-Biblioteca Numpy
+
+--------------------------------------------------
+
+Compilação/Execução:
+O arquivo FireDetector.py corresponde à classe responsável por aplicar os métodos. Possui um método que identifica e extrai o fogo da imagem, retornando uma imagem com apenas o fogo e outra retirando o fogo. Em seguida possui um método responsável pela criação da máscara que leva como parâmetro a imagem do fogo adquirida pelo método anterior. Também existe um método para converter essa máscara em bits (0s e 1s). A máscara é utilizada para o método responsável pelo canny (binarizada), que faz a detecção de bordas, e para o método que realiza o contorno do fogo. Além disso, existe um método que realiza a soma da imagem original com a imagem com o fogo contornado.
+
+No arquivo main.py a imagem é armazenada numa variável que é passada como parâmetro na criação de uma instância do FireDetector. Em seguida os métodos são chamados para, por fim, exibir os resultados.
