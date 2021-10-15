@@ -6,8 +6,9 @@ from FireDetector import FireDetector
 
 
 if __name__ == '__main__':
-    image = cv2.imread('Images/imagem3.jpg')
-
+    image = cv2.imread('Images/imagem3.jpg')  # Endereço da Imagem
+    
+    # Aplica os métodos
     fire_detector = FireDetector(image)
     fire, non_fire = fire_detector.fire_extraction()
     mask = fire_detector.build_mask(fire)
@@ -15,7 +16,8 @@ if __name__ == '__main__':
     canny = fire_detector.apply_canny(bit_mask)
     contour = fire_detector.apply_fire_contour(mask)
     contoured_image = fire_detector.add_contour2image(contour)
-
+    
+    # Exibe os resultados
     cv2.imshow('Original', image)
     cv2.imshow('Fire', fire)
     cv2.imshow('Non Fire', non_fire)
