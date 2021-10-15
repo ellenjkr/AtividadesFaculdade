@@ -9,6 +9,31 @@ Dependências:
 --------------------------------------------------
 
 Compilação/Execução:
-O arquivo FireDetector.py corresponde à classe responsável por aplicar os métodos. Possui um método que identifica e extrai o fogo da imagem, retornando uma imagem com apenas o fogo e outra retirando o fogo. Em seguida possui um método responsável pela criação da máscara que leva como parâmetro a imagem do fogo adquirida pelo método anterior. Também existe um método para converter essa máscara em bits (0s e 1s). A máscara é utilizada para o método responsável pelo canny (binarizada), que faz a detecção de bordas, e para o método que realiza o contorno do fogo. Além disso, existe um método que realiza a soma da imagem original com a imagem com o fogo contornado.
+O arquivo FireDetector.py corresponde à classe responsável por aplicar os métodos. Possui um método que identifica e extrai o fogo da imagem, 
+retornando uma imagem com apenas o fogo e outra retirando o fogo. 
+Em seguida possui um método responsável pela criação da máscara que leva como parâmetro a imagem do fogo adquirida pelo método anterior. 
+Também existe um método para converter essa máscara em bits (0s e 1s). A máscara é utilizada para o método responsável pelo canny (binarizada), 
+que faz a detecção de bordas, e para o método que realiza o contorno do fogo. Além disso, existe um método que realiza a soma da imagem original com a imagem com o fogo contornado.
 
-No arquivo main.py se percorre a pasta de imagens com fogo e cria uma instância do FireDetector para cada imagem. Dessa forma os métodos são aplicados para cada imagem e por fim os resultados são armazenados em uma pasta.
+No arquivo main.py se percorre a pasta de imagens com fogo e cria uma instância do FireDetector para cada imagem.
+Dessa forma os métodos são aplicados para cada imagem e por fim os resultados são armazenados em uma pasta.
+
+
+
+Quais arquivos preciso?
+será necessario estar na mesma pasta o main.py, e FireDetector.py
+tambem sera necessario ter as pastas fire_images contendo as imagens com fogo e tambem non_fire_images contendo as imagens sem fogo 
+o data set com essas pastas podem ser encontrados aqui (https://www.kaggle.com/phylake1337/fire-dataset) e tambem no arquivo zip 
+
+Como Executar?
+Para a execução as seguintes bibliotecas devem estar instaladas no sistema  OpenCV ,Numpy
+Extrair o arquivo Zip que foi enviado
+abrir o arquivo main.py em um IDE de sua preferencia e rodar o codigo que esta contido nele 
+
+Como trocar as pastas com imagens no codigo ?
+no arquivo main.py teremos dois codigos 
+img_names = glob(os.path.join('non_fire_images','*.png')) <<< para pegar as imagens sem fogo
+img_names = glob(os.path.join('fire_images','*.png')) <<< para pegar as imagens com fogo
+caso queira alternar entre uma e outra basta apenas comentar a que você não deseja e descomentar a que você deseja
+
+
