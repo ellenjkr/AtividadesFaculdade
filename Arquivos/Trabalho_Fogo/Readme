@@ -20,19 +20,19 @@ Dessa forma os métodos são aplicados para cada imagem e por fim os resultados 
 
 
 Quais arquivos preciso?
-será necessario estar na mesma pasta o main.py, e FireDetector.py
-tambem sera necessario ter as pastas fire_images contendo as imagens com fogo e tambem non_fire_images contendo as imagens sem fogo 
-o data set com essas pastas podem ser encontrados aqui (https://www.kaggle.com/phylake1337/fire-dataset) e tambem no arquivo zip 
+Será necessario estar na mesma pasta o main.py, e FireDetector.py
+Também será necessário ter as pastas fire_images contendo as imagens com fogo e também non_fire_images contendo as imagens sem fogo 
+O data set com essas pastas pode ser encontrado aqui (https://www.kaggle.com/phylake1337/fire-dataset) e também no arquivo zip 
 
 Como Executar?
-Para a execução as seguintes bibliotecas devem estar instaladas no sistema  OpenCV ,Numpy
+Para a execução as seguintes bibliotecas devem estar instaladas no sistema: OpenCV, Numpy, glob e os
 Extrair o arquivo Zip que foi enviado
-abrir o arquivo main.py em um IDE de sua preferencia e rodar o codigo que esta contido nele 
+Abrir o arquivo main.py em um IDE de sua preferência e rodar o código que esta contido nele 
 
-Como trocar as pastas com imagens no codigo ?
-no arquivo main.py teremos dois codigos 
+Como trocar as pastas com imagens no código?
+No arquivo main.py teremos dois códigos 
 img_names = glob(os.path.join('non_fire_images','*.png')) <<< para pegar as imagens sem fogo
 img_names = glob(os.path.join('fire_images','*.png')) <<< para pegar as imagens com fogo
-caso queira alternar entre uma e outra basta apenas comentar a que você não deseja e descomentar a que você deseja
+Caso queira alternar entre uma e outra basta apenas comentar a que você não deseja e descomentar a que você deseja
 
 
