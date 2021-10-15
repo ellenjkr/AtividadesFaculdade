@@ -2,7 +2,6 @@ Dependências:
 -Linguagem: Python
 -Biblioteca OpenCV
 -Biblioteca Numpy
--Biblioteca Matplotlib
 -Biblioteca glob
 -Biblioteca os
 
