@@ -44,32 +44,32 @@ class FireDetector():
 
 		return (fire, non_fire) 
 
-	def build_mask(self, fire_image):  # Apply threshold to the mask 
+	def build_mask(self, fire_image):  # Aplica o threshold na máscara
 		gray = cv2.cvtColor(fire_image, cv2.COLOR_BGR2GRAY)
 		_, mask = cv2.threshold(gray, 128, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
 
 		return mask
 
-	def convert_mask(self, mask):  # Convert the mask values to bits
+	def convert_mask(self, mask):  # Converte os valores da máscara para bits
 		result = cv2.bitwise_and(self.image, self.image, mask=mask)
 
 		return result
 
-	def apply_canny(self, image):  # Get fire edges
+	def apply_canny(self, image):  # Pega as bordas do fogo
 		gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 		canny = cv2.Canny(gray, 100, 200)
 
 		return canny
 
-	def apply_fire_contour(self, mask):  # Apply a contour to the fire 
-		contour = cv2.bitwise_and(self.image, self.image, mask=mask)
-		_, thr = cv2.threshold(mask, 100, 255, 0)
-		contours, _ = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
-		contour = cv2.drawContours(contour, contours, -1, (255, 0, 0), 3)
+	def apply_fire_contour(self, mask):  # Aplica um contorno ao fogo
+		contour = cv2.bitwise_and(self.image, self.image, mask=mask)  # Converte para bits
+		_, thr = cv2.threshold(mask, 100, 255, 0)  # Aplicao threshold
+		contours, _ = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)  # Encontra os contornos 
+		contour = cv2.drawContours(contour, contours, -1, (255, 0, 0), 3)  # Desenha os contornos
 
 		return contour 
 
-	def add_contour2image(self, contour):  # Add the contour to the original image
+	def add_contour2image(self, contour):  # Soma a imagem do fogo contornado com a imagem original
 		_sum = cv2.add(self.original_image, contour)
 
 		return _sum
